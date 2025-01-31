@@ -170,9 +170,9 @@ namespace HealingImprovements
             {
                 player.HealthController.EffectRemovedEvent -= __instance.method_8;
 
-                float originalDelay = ActiveHealthController.GClass2806.GClass2816_0.MedEffect.MedKitStartDelay;
+                float originalDelay = ActiveHealthController.GClass2808.GClass2818_0.MedEffect.MedKitStartDelay;
 
-                ActiveHealthController.GClass2806.GClass2816_0.MedEffect.MedKitStartDelay = (float)HealingImprovements.HealDelay.Value;
+                ActiveHealthController.GClass2808.GClass2818_0.MedEffect.MedKitStartDelay = (float)HealingImprovements.HealDelay.Value;
 
                 IEffect newEffect = player.ActiveHealthController.DoMedEffect(___medsController_0.Item, EBodyPart.Common, 1f);
                 if (newEffect == null)
@@ -182,13 +182,13 @@ namespace HealingImprovements
                     Callback<IOnHandsUseCallback> callbackToRun = ___callback_0;
                     ___callback_0 = null;
                     callbackToRun(___medsController_0);
-                    ActiveHealthController.GClass2806.GClass2816_0.MedEffect.MedKitStartDelay = originalDelay;
+                    ActiveHealthController.GClass2808.GClass2818_0.MedEffect.MedKitStartDelay = originalDelay;
                     return false;
                 };
 
                 player.HealthController.EffectRemovedEvent += __instance.method_8;
 
-                ActiveHealthController.GClass2806.GClass2816_0.MedEffect.MedKitStartDelay = originalDelay;
+                ActiveHealthController.GClass2808.GClass2818_0.MedEffect.MedKitStartDelay = originalDelay;
 
                 return false;
             }
