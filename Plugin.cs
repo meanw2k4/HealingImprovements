@@ -129,7 +129,7 @@ namespace HealingImprovements
                 return true;
             }
 
-            if (effect is not GInterface349)
+            if (effect is not GInterface350)
             {
                 return false;
             }
